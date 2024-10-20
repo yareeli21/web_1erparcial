@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Todos los ejercicios </title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&family=Playwrite+AR:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav></nav>
+    <header> <center><h1>Ejercicios HTML y JavaScript</h1></center>
+    <p>Yareli Zavala Islas 4BM2</p></header>
+    <div class="container">
+        <section class="section1">
+            <center>
+                <legend>Ejercicios HTML</legend>
+            </center>
+            <center>
+                <select name="opcioneshtml" id="html" onchange="redirigir(this)" class="select1">
+                    <option value="">Seleccione un ejercicio...</option>
+                    <option value="act1.3/index.html">Fechas Importantes</option>
+                    <option value="act1.1/index.html">Formulario</option>
+                    <option value="act1.2/index.html">Tablas 1</option>
+                    <option value="tablas/index.html">Tablas 2</option>
+                    <option value="act1.4/index.html">Tablas 3</option>
+                </select>
+                <i></i>
+            </center>
+            <br>
+            <div id="imagen1">
+                <center>
+                    <a href="https://developer.mozilla.org/es/docs/Web/HTML">
+                        <img src="html.png" alt="Logo de HTML">
+                    </a>
+                    
+                </center>
+            </div>
+            
+        </section>
+    
+        <section class="section2">
+            <center>
+                <legend>Ejercicios JavaScript</legend>
+            </center>
+            <center>
+                <select name="opcionesjava" id="js" onchange="redirigir(this)" class="select2">
+                    <option value="">Seleccione un ejercicio...</option>
+                    <option value="js1/index.html">Números pares con "for"</option>
+                    <option value="js2/index.html">Suma 100 números con "for"</option>
+                    <option value="js3/index.html">Suma 100 números con "while"</option>
+                    <option value="j4/index.html">Números pares con "while" </option>
+                    <option value="j5/index.html">¿Par o no par?  </option>
+                    <option value="j6/index.html">Multiplica  </option>
+                    <option value="j7/index.html">Producto 2 números  </option>
+                    <option value="j8/index.html">Mayor en un arreglo  </option>
+                    <option value="j9/index.html">Vectores y suma  </option>
+                    <option value="j10/index.html">Media de una secuencia</option>
+                    <option value="j11/index.html">Ordenar secuencia</option>
+                    <option value="j12/index.html">Procesando textos</option>
+                    <option value="js13/index.html">Mensajes con un Form </option>
+                    <option value="js14/index.html">Aparece el número </option>
+                    <option value="js15/index.html">Calcula longitud </option>
+                    <option value="j16/index.html">A mayúsculas</option>
+                    <option value="js17/index.html">A minúsculas </option>
+                    <option value="j18/index.html">Posición-letra </option>
+                    <option value="j19/index.html">Letra-posición  </option>
+                    <option value="j20/index.html">Última posición  </option>
+                    <option value="j21/index.html">Subcadenas</option>
+                    <option value="j22/index.html">Separa texto<</option>
+                </select>
+                <i></i>
+            </center>
+            <br>
+            <div id="imagen2">
+                <center>
+                    <a href="https://developer.mozilla.org/es/docs/Web/JavaScript">
+                        <img src="script.png" alt="Logo de JavaScript">
+                    </a>
+                    
+                </center>
+            </div>
+            
+        </section>
+    </div>
+    
+    <script>
+        function redirigir(selectElement) {
+            const url = selectElement.value;
+            if(url) {
+                window.location.href = url;
+            }
+        }
+        </script>
+    
+    <footer> 
+        <address>ESCOM IPN, Unidad profesional Adolfo López Mateos, Av. Juan de Dios Bátiz, Nueva Industrial Vallejo, Gustavo A. Madero, CDMX</address>
+        Servicio registrado <sup>&#174</sup> &trade;</footer>
+</body>
+</html>

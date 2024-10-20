@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros par con for</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1><center>Suma de los primeros 100 números</center></h1>
+<div id="suma"></div>
+
+<script type="text/javascript">
+    function suma(){
+        let suma=0;
+        let i;
+        let output=document.getElementById("suma");
+        //para limpiar el buffer antes de empezar
+        output.textContent="";
+        for(i=1; i<=100; i++){
+            //se está sumando uno con uno
+            suma +=i;
+        }
+        //se está llenando al contenedor
+        //se usa el + para concatenar, se está agregando una variable a una cadena
+        output.textContent="suma de los primeros 100 números es:"+" "+suma;
+    }
+    window.onload=suma;
+</script>
+<footer> 
+    <address>ESCOM IPN, Unidad profesional Adolfo López Mateos, Av. Juan de Dios Bátiz, Nueva Industrial Vallejo, Gustavo A. Madero, CDMX</address>
+    Servicio registrado <sup>&#174</sup> &trade;</footer>
+</body>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos generales</title>
+</head>
+<body>
+    <h1>Formulario :D</h1>
+    <form action="" method="post" name="datos">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="escribe tu nombre" >
+
+        <label for="genero">Género</label>
+        
+            <input type="radio" name="gen" id="fem" value="small">
+            <label for="fem">Femenino</label>
+        
+        
+            <input type="radio" name="gen" id="mas" value="small">
+            <label for="mas">Masculino</label><br>
+        <br>
+        <fieldset>
+            <legend>Dirección</legend>
+            <p>
+                <tr>
+                    <th>Entidad federativa</th>
+                    <td>
+                        <select name="txtEF">
+                            <option value="" disabled selected>Elige una opción</option>
+                            <option value="edomex">Estado de México</option>
+                            <option value="Queretaro">Queretaro</option>
+                            <option value="CDMX">Ciudad de México</option>
+                            <option value="Hidalgo">Hidalgo</option>
+                            <option value="Monterrey">Monterrey</option>
+                        </select>
+                    </td>
+                    
+                </tr>
+            </p>
+            <p>
+                <tr>
+                    <th>Municipio/Delegación</th>
+                    <td>
+                        <select name="txtDel" id="listaDeDel">
+                            <datalist id="listaDeDel">
+                                <option value="" disabled selected>Elige una opción</option>
+                                <option>Gustavo A. Madero</option>
+                                <option>Azcapotzalco</option>
+                                <option>Miguel Hidalgo</option>
+                                <option>Cuahutémoc</option>
+                                <option>Venustiano Carranza</option>
+                            </datalist>
+                        </select>
+                    </td>
+                </tr>
+            </p>
+        </fieldset>
+        
+        <br>
+
+        <label for="pas">Pasatiempos</label>
+        
+            <input type="radio" name="pas" id="l" value="small">
+            <label for="l">Leer</label>
+        
+        
+            <input type="radio" name="pas" id="nada" value="small">
+            <label for="nada">Nadar</label>
+            <input type="radio" name="pas" id="ins" value="small">
+            <label for="ins">Instrumentos</label><br>
+
+        <br>
+
+        <input type="submit">
+        
+        
+        <!--municipios con datalist-->
+        <!--pasatiempos, son 3-->
+
+
+    </form>
+    <br>
+    <br>
+    <footer> 
+        <address>ESCOM IPN, Unidad profesional Adolfo López Mateos, Av. Juan de Dios Bátiz, Nueva Industrial Vallejo, Gustavo A. Madero, CDMX</address>
+        Servicio registrado <sup>&#174</sup> &trade;</footer>
+</body>
+</html>

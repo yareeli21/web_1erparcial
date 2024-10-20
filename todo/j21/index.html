@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subcadenas</title>
+</head>
+<body>
+<center>
+    <fieldset>
+        <legend>Extraer subcadena</legend>
+        <form name="frmDatos" method="post" onsubmit="return false;">
+            Texto: 
+            <input type="text" name="txtDatos" size="30" placeholder="Introduce un texto"><br>
+            Posición inicial: 
+            <input type="number" name="txtInicio" min="0" placeholder="Posición de inicio"><br>
+            Posición final (opcional): 
+            <input type="number" name="txtFin" min="0" placeholder="Posición final"><br>
+            Resultado:
+            <input type="text" name="resultado" size="30" readonly><br>
+            <button type="button" onclick="obtenerSubcadena()">Extraer subcadena</button>
+        </form>
+    </fieldset>
+</center>
+
+<script>
+    function obtenerSubcadenaDeTexto(texto, inicio, fin) {
+        return texto.substring(inicio, fin);
+    }
+
+    function obtenerSubcadena() {
+        let texto = document.frmDatos.txtDatos.value;
+        let inicio = parseInt(document.frmDatos.txtInicio.value);
+        let fin = document.frmDatos.txtFin.value ? parseInt(document.frmDatos.txtFin.value) : undefined;
+        
+        // Verificamos que el inicio sea válido
+        if(inicio >= 0 && inicio < texto.length) {
+            let subcadena;
+            if(fin === undefined) {
+                // Si no se especifica fin, extraemos hasta el final
+                subcadena = obtenerSubcadenaDeTexto(texto, inicio);
+            } else {
+                // Si se especifica fin, extraemos hasta esa posición
+                subcadena = obtenerSubcadenaDeTexto(texto, inicio, fin);
+            }
+            document.frmDatos.resultado.value = subcadena;
+        } else {
+            document.frmDatos.resultado.value = "Posición inicial no válida";
+        }
+    }
+</script>
+<footer> 
+    <address>ESCOM IPN, Unidad profesional Adolfo López Mateos, Av. Juan de Dios Bátiz, Nueva Industrial Vallejo, Gustavo A. Madero, CDMX</address>
+    Servicio registrado <sup>&#174</sup> &trade;</footer>
+</body>
+</html>

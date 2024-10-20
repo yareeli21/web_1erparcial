@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posición - letra</title>
+</head>
+<body>
+    <center>
+        <fieldset>
+            <legend>Datos</legend>
+            <form name="frmDatos" method="post" onsubmit="return false;">
+                Datos 
+                <input type="text" name="txtDatos" size="30" placeholder="Introduce nombre en mayusculas" onkeydown="if(event.key === 'Enter') {cambiarMayusculas(this); return false; }" onchange="cambiarMayusculas(this);"><br>
+                Posición a obtener 
+                <input type="number" name="txtPos" placeholder="Introduce la posición a obtener" ><br>
+                Resultado
+                <input type="text" name="resultado" id="resultado" readonly><br>
+                <button type="button" onclick="obtenerLetra()">Obtener</button>
+            </form>
+        </fieldset>
+    </center>
+    <script>
+        function mostrar(texto,posicion){
+            return texto.charAt(posicion);
+        }
+
+        function obtenerLetra(){
+            let texto = document.frmDatos.txtDatos.value;
+            let posicion = parseInt(document.frmDatos.txtPos.value);
+            //se verifica que la posicion dada es válida
+            if(posicion >= 0 && posicion < texto.length){
+            let letra=mostrar(texto,posicion);
+            document.frmDatos.resultado.value=letra;
+            }
+            else{
+                document.frmDatos.resultado.value="Posición inválida";
+            }
+        }
+    </script>
+    <footer> 
+        <address>ESCOM IPN, Unidad profesional Adolfo López Mateos, Av. Juan de Dios Bátiz, Nueva Industrial Vallejo, Gustavo A. Madero, CDMX</address>
+        Servicio registrado <sup>&#174</sup> &trade;</footer>
+</body>
+</html>

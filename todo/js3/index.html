@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma de todos los números con while</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1><center>Suma de los primeros 100 números con While</center></h1>
+    <div id="suma"></div>
+
+    <script type="text/javascript">
+    function sumaWhile(){
+        let i=1;
+        let suma=0;
+        let output=document.getElementById("suma");
+        output.textContent="";
+        while(i<=100){
+            suma +=i;
+
+            i++;
+        }
+        output.textContent="La suma de todos los primeros 100 números:"+" "+suma;
+    }   
+    //que ya va a salir la función
+    window.onload=sumaWhile;
+    </script>
+<footer> 
+    <address>ESCOM IPN, Unidad profesional Adolfo López Mateos, Av. Juan de Dios Bátiz, Nueva Industrial Vallejo, Gustavo A. Madero, CDMX</address>
+    Servicio registrado <sup>&#174</sup> &trade;</footer>
+</body>

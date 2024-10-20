@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Última posición</title>
+</head>
+<body>
+
+<center>
+    <fieldset>
+        <legend>Última posición de un carácter</legend>
+        <form name="frmDatos" method="post" onsubmit="return false;">
+            Texto: 
+            <input type="text" name="txtDatos" size="30" placeholder="Introduce un texto"><br>
+            Carácter a buscar: 
+            <input type="text" name="txtCar" maxlength="1" placeholder="Introduce un carácter"><br>
+            Resultado:
+            <input type="text" name="resultado" readonly><br>
+            <button type="button" onclick="obtenerUltimaPosicion()">Buscar última posición</button>
+        </form>
+    </fieldset>
+</center>
+
+<script>
+    function mostrarUltimaPosicionDeCaracterX(texto, caracter) {
+        return texto.lastIndexOf(caracter);
+    }
+
+    function obtenerUltimaPosicion() {
+        let texto = document.frmDatos.txtDatos.value;
+        let caracter = document.frmDatos.txtCar.value;
+        
+        let posicion = mostrarUltimaPosicionDeCaracterX(texto, caracter);
+
+        if(posicion !== -1) {
+            document.frmDatos.resultado.value = `La última posición de '${caracter}' es ${posicion}`;
+        } else {
+            document.frmDatos.resultado.value = `El carácter '${caracter}' no existe en el texto`;
+        }
+    }
+</script>
+<footer> 
+    <address>ESCOM IPN, Unidad profesional Adolfo López Mateos, Av. Juan de Dios Bátiz, Nueva Industrial Vallejo, Gustavo A. Madero, CDMX</address>
+    Servicio registrado <sup>&#174</sup> &trade;</footer>
+</body>
+</html>

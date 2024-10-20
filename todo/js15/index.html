@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula longitud</title>
+</head>
+<body>
+    <center>
+        <fieldset>
+            <legend>Datos</legend>
+            <form name="frmDatos" action="" method="post"> 
+                datos
+                <input type="text" name="txtDatos" size="30" placeholder="Introduce un Texto" onchange="calculaLongitud(frmDatos.txtDatos.value)">
+            </form>
+        </fieldset>
+        <div id="divImagen">
+            <img src="img/logo.png" alt="logo">
+        </div>
+    </center>
+
+    <script>
+        function calculaLongitud(texto) {
+        alert('La longitud de'+ texto + 'es:' + texto.length);        
+        }
+    </script>
+    <footer> 
+        <address>ESCOM IPN, Unidad profesional Adolfo López Mateos, Av. Juan de Dios Bátiz, Nueva Industrial Vallejo, Gustavo A. Madero, CDMX</address>
+        Servicio registrado <sup>&#174</sup> &trade;</footer>
+</body>
+</html>

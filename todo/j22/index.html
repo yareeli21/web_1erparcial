@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Separa texto</title>
+</head>
+<body>
+<center>
+    <fieldset>
+        <legend>Separar texto</legend>
+        <form name="frmDatos" method="post" onsubmit="return false;">
+            Datos: 
+            <input type="text" name="txtDatos" size="40" placeholder="Introduce un texto"><br>
+            Carácter separador: 
+            <input type="text" name="txtCaracter" maxlength="1" size="5" placeholder="Ej: ,"><br>
+            Resultado:
+            <input type="text" name="resultado" size="40" readonly><br>
+            <button type="button" onclick="separarTexto()">Separar</button>
+        </form>
+    </fieldset>
+</center>
+
+<script>
+    function separarCadenaDeTexto(texto, caracter) {
+        return texto.split(caracter);
+    }
+
+    function separarTexto() {
+        let texto = document.frmDatos.txtDatos.value;
+        let caracter = document.frmDatos.txtCaracter.value;
+        
+        if(caracter) {
+            let resultado = separarCadenaDeTexto(texto, caracter);
+            document.frmDatos.resultado.value = resultado.join(','); // Mostramos el array como string
+        } else {
+            document.frmDatos.resultado.value = "Por favor, introduce un carácter separador";
+        }
+    }
+</script>
+<footer> 
+    <address>ESCOM IPN, Unidad profesional Adolfo López Mateos, Av. Juan de Dios Bátiz, Nueva Industrial Vallejo, Gustavo A. Madero, CDMX</address>
+    Servicio registrado <sup>&#174</sup> &trade;</footer>
+</body>
+</html>

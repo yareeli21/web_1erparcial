@@ -1,0 +1,47 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide en 2 columnas iguales */
+    gap: 20px; /* Espacio entre columnas */
+
+    font-family: "Londrina Sketch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+header{
+    background-color:lavenderblush;
+    font-family: 'Playwrite AR', sans-serif;
+}
+.section1{
+    background-color: coral;
+}
+
+.section2{
+background-color: gold;
+}
+.select1,.select2 {
+    background-color: darkred;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: #f5f6fa;
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 200px;
+}
+
+.select1 .option, .select2 .option {
+    height: 30px;
+    border-bottom: 8px;
+}
+
+footer{
+    font-family: 'Playwrite AR', sans-serif;
+    font-size: smaller;
+}
+body{
+    background-color: beige;
+}

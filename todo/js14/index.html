@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aparece el mismo número</title>
+</head>
+<body>
+    <center>
+        <fieldset>
+            <legend>Datos</legend>
+            <form action="" name="frmDatos" method="post" onsubmit="return calcular(this);">
+                <label for="numero">número</label>
+                <input type="number" name="txtNumero" id="numero" placeholder="Introduce un numero">
+                <label for="resultado">Resultado</label>
+                <input type="number" id="resultado" placeholder="Aqui aparece el resultado">
+                <button type="submit">Calcular</button>
+        
+            </form>
+        </fieldset>
+
+    </center>
+    <script>
+        function calcular(form) {
+        var valor=form.txtNumero.value;
+        document.getElementById('resultado').value= valor;
+        }
+        
+    </script> 
+    <footer> 
+        <address>ESCOM IPN, Unidad profesional Adolfo López Mateos, Av. Juan de Dios Bátiz, Nueva Industrial Vallejo, Gustavo A. Madero, CDMX</address>
+        Servicio registrado <sup>&#174</sup> &trade;</footer>
+</body>
+</html>
